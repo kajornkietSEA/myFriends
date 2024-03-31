@@ -15,6 +15,11 @@
             align-items: center;
             min-height: 100vh;
         }
+
+        .inputBox:hover {
+
+            border-color: yellow;
+        }
     </style>
 </head>
 
@@ -23,21 +28,21 @@
         <div class="text-center">
             <h2">Your Friends</h2>
 
-            <p id="randomNumberDisplay">0</p>
-            <button class="btn btn-primary mb-3" onclick="generateRandomNumber()">Reset</button>
+                <p id="randomNumberDisplay">0</p>
+                <button class="btn btn-primary mb-3" onclick="generateRandomNumber()">Reset</button>
 
-            <div><label class="form-label">Fill info of your friends.</label></div>
-            <table class="table" id="dynamicTable"></table>
+                <div><label class="form-label">Fill info of your friends.</label></div>
+                <table class="table" id="dynamicTable"></table>
 
-            <label class="form-label">Choose Your Functions:</label>
-            <select class="form-select mb-3" id="menu" name="menu" >
-                <option value="a">คำนวนจำนวนอายุรวม</option>
-                <option value="b">คำนวนอายุเฉลี่ย</option>
-                <option value="c">คำนวนอายุของเพื่อนที่อายุน้อยที่สุด</option>
-                <option value="d">คำนวนอายุของเพื่อนที่อายุมากที่สุด</option>
-            </select>
+                <label class="form-label">Choose Your Functions:</label>
+                <select class="form-select mb-3" id="menu" name="menu">
+                    <option value="a">คำนวนจำนวนอายุรวม</option>
+                    <option value="b">คำนวนอายุเฉลี่ย</option>
+                    <option value="c">คำนวนอายุของเพื่อนที่อายุน้อยที่สุด</option>
+                    <option value="d">คำนวนอายุของเพื่อนที่อายุมากที่สุด</option>
+                </select>
 
-            <button class="btn btn-success" onclick="runFunction()">Run</button>
+                <button class="btn btn-success" onclick="runFunction()">Run</button>
         </div>
     </div>
 
@@ -59,15 +64,12 @@
                 var nickNameCell = row.insertCell(0);
                 var agesCell = row.insertCell(1);
 
-                nickNameCell.innerHTML = '<input type="text" placeholder="Nick Name" onmouseover="focus()" >';
-                agesCell.innerHTML = '<input type="text" placeholder="Ages" onmouseover="focus()">';
+                nickNameCell.innerHTML = '<input type="text" placeholder="Nick Name" class ="inputBox">';
+                agesCell.innerHTML = '<input type="text" placeholder="Ages" class ="inputBox">';
             }
         }
 
-        function focus() {
-            alert("ช่องใส่ข้อมูล");
-            
-        }
+
         function runFunction() {
 
             var choice = document.getElementById("menu").value;
