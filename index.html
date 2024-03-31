@@ -21,7 +21,7 @@
 <body>
     <div class="container center">
         <div class="text-center">
-            <h2>Your Friends</h2>
+            <h2 onmouseover="focus(this)"">Your Friends</h2>
 
             <p id="randomNumberDisplay">0</p>
             <button class="btn btn-primary mb-3" onclick="generateRandomNumber()">Reset</button>
@@ -65,7 +65,7 @@
         }
 
         function focus(x) {
-            //x.style.borderColor = 'red';
+            x.style.borderColor = 'red';
         }
         function runFunction() {
 
