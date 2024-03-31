@@ -59,11 +59,14 @@
                 var nickNameCell = row.insertCell(0);
                 var agesCell = row.insertCell(1);
 
-                nickNameCell.innerHTML = '<input type="text" placeholder="Nick Name">';
-                agesCell.innerHTML = '<input type="text" placeholder="Ages">';
+                nickNameCell.innerHTML = '<input type="text" placeholder="Nick Name" onmouseover="focus(this)">';
+                agesCell.innerHTML = '<input type="text" placeholder="Ages" onmouseover="focus(this)">';
             }
         }
 
+        function focus(x) {
+            x.style.borderColor = 'red';
+        }
         function runFunction() {
 
             var choice = document.getElementById("menu").value;
